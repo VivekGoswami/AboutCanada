@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		957F47B4C6467C656F734FCD /* Pods_AboutCanada.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 23389390A85848E17F53B67A /* Pods_AboutCanada.framework */; };
+		D7BD652513FA0981260A499E /* Pods_AboutCanadaTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 70D781A7A4F6F40BA6B2CDF5 /* Pods_AboutCanadaTests.framework */; };
 		DFBEC64D25CDB02D00E097EA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFBEC64C25CDB02D00E097EA /* AppDelegate.swift */; };
 		DFBEC65125CDB02D00E097EA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFBEC65025CDB02D00E097EA /* ViewController.swift */; };
 		DFBEC65625CDB02F00E097EA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DFBEC65525CDB02F00E097EA /* Assets.xcassets */; };
@@ -25,6 +27,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		179F7962D19980FAB1F0F14F /* Pods-AboutCanada.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AboutCanada.debug.xcconfig"; path = "Target Support Files/Pods-AboutCanada/Pods-AboutCanada.debug.xcconfig"; sourceTree = "<group>"; };
+		23389390A85848E17F53B67A /* Pods_AboutCanada.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AboutCanada.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6CAB43A627EE786F93ADC6F6 /* Pods-AboutCanadaTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AboutCanadaTests.debug.xcconfig"; path = "Target Support Files/Pods-AboutCanadaTests/Pods-AboutCanadaTests.debug.xcconfig"; sourceTree = "<group>"; };
+		70D781A7A4F6F40BA6B2CDF5 /* Pods_AboutCanadaTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AboutCanadaTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		91E56B877A23EDBA63A91725 /* Pods-AboutCanada.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AboutCanada.release.xcconfig"; path = "Target Support Files/Pods-AboutCanada/Pods-AboutCanada.release.xcconfig"; sourceTree = "<group>"; };
+		CB77449FF3510B513679B94B /* Pods-AboutCanadaTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AboutCanadaTests.release.xcconfig"; path = "Target Support Files/Pods-AboutCanadaTests/Pods-AboutCanadaTests.release.xcconfig"; sourceTree = "<group>"; };
 		DFBEC64925CDB02D00E097EA /* AboutCanada.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AboutCanada.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DFBEC64C25CDB02D00E097EA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DFBEC65025CDB02D00E097EA /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -41,6 +49,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				957F47B4C6467C656F734FCD /* Pods_AboutCanada.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -48,18 +57,30 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D7BD652513FA0981260A499E /* Pods_AboutCanadaTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0EBEBAFFE3D6AB478E697BE9 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				23389390A85848E17F53B67A /* Pods_AboutCanada.framework */,
+				70D781A7A4F6F40BA6B2CDF5 /* Pods_AboutCanadaTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		DFBEC64025CDB02D00E097EA = {
 			isa = PBXGroup;
 			children = (
 				DFBEC64B25CDB02D00E097EA /* AboutCanada */,
 				DFBEC66225CDB02F00E097EA /* AboutCanadaTests */,
 				DFBEC64A25CDB02D00E097EA /* Products */,
+				FCF9A2F1FE5F63B2893A0D6F /* Pods */,
+				0EBEBAFFE3D6AB478E697BE9 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -165,6 +186,18 @@
 			path = Extension;
 			sourceTree = "<group>";
 		};
+		FCF9A2F1FE5F63B2893A0D6F /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				179F7962D19980FAB1F0F14F /* Pods-AboutCanada.debug.xcconfig */,
+				91E56B877A23EDBA63A91725 /* Pods-AboutCanada.release.xcconfig */,
+				6CAB43A627EE786F93ADC6F6 /* Pods-AboutCanadaTests.debug.xcconfig */,
+				CB77449FF3510B513679B94B /* Pods-AboutCanadaTests.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -172,9 +205,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = DFBEC66825CDB02F00E097EA /* Build configuration list for PBXNativeTarget "AboutCanada" */;
 			buildPhases = (
+				BB59286B170895F00624FE39 /* [CP] Check Pods Manifest.lock */,
 				DFBEC64525CDB02D00E097EA /* Sources */,
 				DFBEC64625CDB02D00E097EA /* Frameworks */,
 				DFBEC64725CDB02D00E097EA /* Resources */,
+				16AE65182A31292584F9AEF9 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -189,6 +224,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = DFBEC66B25CDB02F00E097EA /* Build configuration list for PBXNativeTarget "AboutCanadaTests" */;
 			buildPhases = (
+				3C12DFFAF48107D8B98ED817 /* [CP] Check Pods Manifest.lock */,
 				DFBEC65B25CDB02F00E097EA /* Sources */,
 				DFBEC65C25CDB02F00E097EA /* Frameworks */,
 				DFBEC65D25CDB02F00E097EA /* Resources */,
@@ -259,6 +295,70 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		16AE65182A31292584F9AEF9 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-AboutCanada/Pods-AboutCanada-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-AboutCanada/Pods-AboutCanada-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-AboutCanada/Pods-AboutCanada-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		3C12DFFAF48107D8B98ED817 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-AboutCanadaTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BB59286B170895F00624FE39 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-AboutCanada-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		DFBEC64525CDB02D00E097EA /* Sources */ = {
@@ -416,6 +516,7 @@
 		};
 		DFBEC66925CDB02F00E097EA /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 179F7962D19980FAB1F0F14F /* Pods-AboutCanada.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -436,6 +537,7 @@
 		};
 		DFBEC66A25CDB02F00E097EA /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 91E56B877A23EDBA63A91725 /* Pods-AboutCanada.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -456,6 +558,7 @@
 		};
 		DFBEC66C25CDB02F00E097EA /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6CAB43A627EE786F93ADC6F6 /* Pods-AboutCanadaTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -477,6 +580,7 @@
 		};
 		DFBEC66D25CDB02F00E097EA /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CB77449FF3510B513679B94B /* Pods-AboutCanadaTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
