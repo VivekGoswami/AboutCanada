@@ -21,6 +21,8 @@
 		DFBEC68825CDC2DC00E097EA /* UITableView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFBEC68725CDC2DC00E097EA /* UITableView+Extension.swift */; };
 		DFBEC68A25CDC98400E097EA /* MainViewController+UITableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFBEC68925CDC98400E097EA /* MainViewController+UITableView.swift */; };
 		DFBEC68C25CFA97800E097EA /* AboutImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFBEC68B25CFA97800E097EA /* AboutImageView.swift */; };
+		DFBEC68E25CFC25400E097EA /* NetworkListner.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFBEC68D25CFC25400E097EA /* NetworkListner.swift */; };
+		DFBEC69125CFD0B900E097EA /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = DFBEC69025CFD0B900E097EA /* .swiftlint.yml */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +58,8 @@
 		DFBEC68725CDC2DC00E097EA /* UITableView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+Extension.swift"; sourceTree = "<group>"; };
 		DFBEC68925CDC98400E097EA /* MainViewController+UITableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MainViewController+UITableView.swift"; sourceTree = "<group>"; };
 		DFBEC68B25CFA97800E097EA /* AboutImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutImageView.swift; sourceTree = "<group>"; };
+		DFBEC68D25CFC25400E097EA /* NetworkListner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkListner.swift; sourceTree = "<group>"; };
+		DFBEC69025CFD0B900E097EA /* .swiftlint.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,6 +94,7 @@
 		DFBEC64025CDB02D00E097EA = {
 			isa = PBXGroup;
 			children = (
+				DFBEC69025CFD0B900E097EA /* .swiftlint.yml */,
 				DFBEC64B25CDB02D00E097EA /* AboutCanada */,
 				DFBEC66225CDB02F00E097EA /* AboutCanadaTests */,
 				DFBEC64A25CDB02D00E097EA /* Products */,
@@ -136,6 +141,7 @@
 			isa = PBXGroup;
 			children = (
 				DFBEC67E25CDBBBB00E097EA /* AppManager.swift */,
+				DFBEC68D25CFC25400E097EA /* NetworkListner.swift */,
 			);
 			path = Manager;
 			sourceTree = "<group>";
@@ -238,6 +244,7 @@
 				DFBEC64625CDB02D00E097EA /* Frameworks */,
 				DFBEC64725CDB02D00E097EA /* Resources */,
 				16AE65182A31292584F9AEF9 /* [CP] Embed Pods Frameworks */,
+				DFBEC68F25CFCF4800E097EA /* Run Script */,
 			);
 			buildRules = (
 			);
@@ -310,6 +317,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DFBEC69125CFD0B900E097EA /* .swiftlint.yml in Resources */,
 				DFBEC65625CDB02F00E097EA /* Assets.xcassets in Resources */,
 				DFBEC67625CDB0E000E097EA /* LaunchScreen.storyboard in Resources */,
 			);
@@ -386,6 +394,24 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		DFBEC68F25CFCF4800E097EA /* Run Script */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "Run Script";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/SwiftLint/swiftlint\"\n";
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -395,6 +421,7 @@
 			files = (
 				DFBEC68625CDC17500E097EA /* Constant.swift in Sources */,
 				DFBEC65125CDB02D00E097EA /* MainViewController.swift in Sources */,
+				DFBEC68E25CFC25400E097EA /* NetworkListner.swift in Sources */,
 				DFBEC64D25CDB02D00E097EA /* AppDelegate.swift in Sources */,
 				DFBEC68125CDBECD00E097EA /* AboutListView.swift in Sources */,
 				DFBEC67F25CDBBBB00E097EA /* AppManager.swift in Sources */,

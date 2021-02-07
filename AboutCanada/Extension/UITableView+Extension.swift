@@ -13,3 +13,10 @@ extension UITableViewCell {
         return String(describing: self)
     }
 }
+extension UITableView {
+    func reloadAsync() {
+        DispatchQueue.main.async {
+            self.reloadData()
+        }
+    }
+}

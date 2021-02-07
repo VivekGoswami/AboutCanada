@@ -14,13 +14,18 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+        
+        // Network analyer start when app launch for checking reachability
+        AppManager.shared.startNeworkNotifier()
+        
+        // MainViewcontroller set as our rootcontroller from here.
         self.setupRootController()
         return true
     }
 }
-extension AppDelegate{
-    //MARK:- Setup root view controller
-    func setupRootController(){
+extension AppDelegate {
+    // MARK: - Setup root view controller
+    func setupRootController() {
         let rootViewController = MainViewController()
         let navController = UINavigationController(rootViewController: rootViewController)
         

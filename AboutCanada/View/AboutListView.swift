@@ -53,10 +53,10 @@ class AboutListView: UIView {
         super.init(coder: aDecoder)
     }
 
-    func setTableViewDataSourceDelegate <obj: UITableViewDataSource & UITableViewDelegate> (
-        dataSourceDelegate: obj) {
+    func setTableViewDataSourceDelegate <Obj: UITableViewDataSource & UITableViewDelegate> (
+        dataSourceDelegate: Obj) {
         recordsTableView.dataSource = dataSourceDelegate
         recordsTableView.delegate = dataSourceDelegate
-        recordsTableView.reloadData()
+        recordsTableView.reloadAsync()
     }    
 }

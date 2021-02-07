@@ -9,7 +9,15 @@
 import UIKit
 
 struct BarButton {
-    struct title {
+    struct Title {
         static let reload = "Reload"
+    }
+}
+struct Notification {
+    static let reachabilityStatusChanged = "ReachabilityStatusChangedNotification"
+}
+struct Network {
+    struct Message {
+        static let unavailable = "Please check your internet connection"
     }
 }

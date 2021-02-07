@@ -26,7 +26,7 @@ class AboutCell: UITableViewCell {
         return label
     }()
     
-    //Specify method or properties which you want to load when cell create
+    // Specify method or properties which you want to load when cell create
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         
@@ -39,19 +39,19 @@ class AboutCell: UITableViewCell {
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-    //MARK:- Title Properties
+    // MARK: - Title Properties
     private func setTitleLabel() {
         contentView.addSubview(titleLabel)
         titleLabel.textAlignment = .left
         titleLabel.translatesAutoresizingMaskIntoConstraints = false
     }
-    //MARK:- Description Properties
+    // MARK: - Description Properties
     private func setDescriptionLabel() {
         contentView.addSubview(descriptionLabel)
         descriptionLabel.textAlignment = .left
         descriptionLabel.translatesAutoresizingMaskIntoConstraints = false
     }
-    //MARK:- ImageView Properties
+    // MARK: - ImageView Properties
     /* Imageview use as custom imageview you can set option in AboutImageView class */
     
     private func setImageView() {
@@ -78,7 +78,7 @@ class AboutCell: UITableViewCell {
             descriptionLabel.topAnchor.constraint(equalTo: titleLabel.bottomAnchor, constant: 10),
             descriptionLabel.leadingAnchor.constraint(equalTo: aboutImageView.trailingAnchor, constant: 10),
             descriptionLabel.trailingAnchor.constraint(equalTo: marginGuide.trailingAnchor),
-            descriptionLabel.bottomAnchor.constraint(lessThanOrEqualTo: marginGuide.bottomAnchor),
+            descriptionLabel.bottomAnchor.constraint(lessThanOrEqualTo: marginGuide.bottomAnchor)
         ])
     }
 }

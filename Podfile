@@ -8,6 +8,8 @@ target 'AboutCanada' do
   pod 'SVProgressHUD', '~> 2.2'
   pod 'Nuke', '~> 8.0'
   pod 'Moya-ObjectMapper', '~> 2.9'
+  pod 'ReachabilitySwift', '~> 5.0'
+  pod 'SwiftLint', '~> 0.42'
   # Pods for AboutCanada
 
   target 'AboutCanadaTests' do

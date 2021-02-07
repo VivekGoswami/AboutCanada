@@ -17,7 +17,7 @@ extension MainViewController : UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier:
             AboutCell.identifier, for: indexPath) as? AboutCell else {
-                fatalError("UITableViewCell must be downcasted to SectionTableCell")
+                return UITableViewCell()
         }
         return cell
     }
