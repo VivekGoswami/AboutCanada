@@ -7,9 +7,15 @@
 //
 
 import UIKit
+import SDWebImage
 
 class AboutCell: UITableViewCell {
 
+    var item : Rows? {
+        didSet {
+            self.setRecord()
+        }
+    }
     private var aboutImageView: UIImageView = AboutImageView()
     private var titleLabel: UILabel = {
         let label = UILabel()
@@ -25,20 +31,22 @@ class AboutCell: UITableViewCell {
         label.numberOfLines = 0
         return label
     }()
-    
     // Specify method or properties which you want to load when cell create
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
-        
         setTitleLabel()
         setDescriptionLabel()
         setImageView()
-        setupViewsConstraints()
+        setupConstraints()
+    }
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+        setTitleLabel()
+        setDescriptionLabel()
+        setImageView()
+        setupConstraints()
     }
     
-    required init?(coder aDecoder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
-    }
     // MARK: - Title Properties
     private func setTitleLabel() {
         contentView.addSubview(titleLabel)
@@ -53,32 +61,39 @@ class AboutCell: UITableViewCell {
     }
     // MARK: - ImageView Properties
     /* Imageview use as custom imageview you can set option in AboutImageView class */
-    
     private func setImageView() {
-        aboutImageView.translatesAutoresizingMaskIntoConstraints = false
         contentView.addSubview(aboutImageView)
+        aboutImageView.translatesAutoresizingMaskIntoConstraints = false
     }
-    func setupViewsConstraints() {
-        // setup views constraints
-        let marginGuide = contentView.layoutMarginsGuide
+    // setup views constraints
+    private func setupConstraints() {
         NSLayoutConstraint.activate([
-
-            // ImageView
-            aboutImageView.widthAnchor.constraint(equalToConstant: 100),
-            aboutImageView.heightAnchor.constraint(equalToConstant: 100),
-            aboutImageView.leadingAnchor.constraint(equalTo: marginGuide.leadingAnchor),
-            aboutImageView.topAnchor.constraint(equalTo: marginGuide.topAnchor),
-
-            // Title
-            titleLabel.topAnchor.constraint(equalTo: marginGuide.topAnchor),
-            titleLabel.leadingAnchor.constraint(equalTo: aboutImageView.trailingAnchor, constant: 10),
-            titleLabel.trailingAnchor.constraint(equalTo: marginGuide.trailingAnchor),
-
-            // Description
+            aboutImageView.leftAnchor.constraint(equalTo: contentView.leftAnchor, constant: 10),
+            aboutImageView.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 10),
+            aboutImageView.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -10).withPriority(priority: .defaultLow),
+            aboutImageView.widthAnchor.constraint(equalToConstant: 80),
+            aboutImageView.heightAnchor.constraint(equalToConstant: 80),
+            
+            titleLabel.topAnchor.constraint(equalTo: aboutImageView.topAnchor),
+            titleLabel.leftAnchor.constraint(equalTo: aboutImageView.rightAnchor, constant: 10),
+            titleLabel.rightAnchor.constraint(equalTo: contentView.rightAnchor, constant: -10),
+            
             descriptionLabel.topAnchor.constraint(equalTo: titleLabel.bottomAnchor, constant: 10),
-            descriptionLabel.leadingAnchor.constraint(equalTo: aboutImageView.trailingAnchor, constant: 10),
-            descriptionLabel.trailingAnchor.constraint(equalTo: marginGuide.trailingAnchor),
-            descriptionLabel.bottomAnchor.constraint(lessThanOrEqualTo: marginGuide.bottomAnchor)
+            descriptionLabel.leftAnchor.constraint(equalTo: titleLabel.leftAnchor),
+            descriptionLabel.rightAnchor.constraint(equalTo: contentView.rightAnchor, constant: -10),
+            descriptionLabel.bottomAnchor.constraint(lessThanOrEqualTo: contentView.bottomAnchor, constant: -10)
         ])
+        descriptionLabel.setContentHuggingPriority(.defaultHigh, for: .vertical)
+    }
+    func setRecord() {
+        self.titleLabel.text = self.item?.title
+        self.descriptionLabel.text = self.item?.description
+        
+        if let strURL = self.item?.imageHref,let url = URL(string: strURL) {
+            self.aboutImageView.sd_setImage(with: url, placeholderImage:UIImage(named: Image.placeholder), options: .refreshCached)
+        } else {
+            self.aboutImageView.image = UIImage(named: Image.placeholder)
+        }
+        setNeedsLayout()
     }
 }

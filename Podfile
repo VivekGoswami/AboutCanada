@@ -6,10 +6,10 @@ target 'AboutCanada' do
   use_frameworks!
   pod 'Moya', '~> 14.0'
   pod 'SVProgressHUD', '~> 2.2'
-  pod 'Nuke', '~> 8.0'
   pod 'Moya-ObjectMapper', '~> 2.9'
   pod 'ReachabilitySwift', '~> 5.0'
   pod 'SwiftLint', '~> 0.42'
+  pod 'SDWebImage', '~> 5.0'
   # Pods for AboutCanada
 
   target 'AboutCanadaTests' do

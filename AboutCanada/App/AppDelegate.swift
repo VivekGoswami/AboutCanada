@@ -15,7 +15,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         
-        // Network analyer start when app launch for checking reachability
+        // Network analyzer start when app launch for checking reachability
         AppManager.shared.startNeworkNotifier()
         
         // MainViewcontroller set as our rootcontroller from here.
