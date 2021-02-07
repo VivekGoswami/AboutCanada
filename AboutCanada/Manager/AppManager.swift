@@ -1,0 +1,41 @@
+//
+//  AppManager.swift
+//  AboutCanada
+//
+//  Created by Vivek Goswami on 2/5/21.
+//  Copyright © 2021 Vivek Goswami. All rights reserved.
+//
+
+import UIKit
+
+/**
+ App Environment for Webservices
+ 
+ - parameter int: Select enviroment with dot syntax.
+ - returns: type of enviroment
+ - warning: nil
+ 
+ 
+ # Notes: #
+ 1. Change if you want to deploy
+ 
+ # Example #
+ ```
+ ```
+ 
+ */
+enum AppStatusType : Int {
+    case development
+    case production
+}
+class AppManager: NSObject {
+    
+    static let shared = AppManager()
+    
+    var appStatus : AppStatusType = .development
+    
+    //MARK: - Members
+    override init() {
+        super.init()
+    }
+}
