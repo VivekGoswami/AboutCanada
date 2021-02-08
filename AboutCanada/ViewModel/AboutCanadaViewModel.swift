@@ -41,7 +41,7 @@ class AboutCanadaViewModel : NSObject {
     ///
     private func manageBlankRecords(records : AboutCanada) {
         
-        let filter = records.rows?.filter({ $0.title != nil })
+        let filter = records.rows?.filter({ !$0.toJSON().isEmpty })
         let title = records.title
         
         let canadaRecord = AboutCanada()
