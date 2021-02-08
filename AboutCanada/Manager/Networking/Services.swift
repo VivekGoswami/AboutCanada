@@ -10,47 +10,6 @@ import UIKit
 import Foundation
 import Moya
 
-/**
- Making URL with appeded endpoint from Target
- 
- - parameter route: Target type select from enums.
- - returns: string URL
- - warning: nil
- 
- 
- # Notes: #
- 1.
- 
- # Example #
- ```
- //
- ```
- 
- */
-public func url(route: TargetType) -> String {
-    return route.baseURL.appendingPathComponent(route.path).absoluteString
-}
-/**
-Making URL with escaped character support with &
-
-- parameter string: Use String url to make it supported URL
-- returns: string URL
-- warning: nil
-
-
-# Notes: #
-1.
-
-# Example #
-```
-```
-
-*/
-private extension String {
-    var urlEscaped: String {
-        return self.addingPercentEncoding(withAllowedCharacters: .urlHostAllowed)!
-    }
-}
 let provider = MoyaProvider<Services>()
 
 /**
@@ -74,29 +33,12 @@ enum Services {
     case aboutCanada
 }
 
-/**
-List of services with actual endpoint name
- 
-- parameter nil
-- returns: nil
-- warning: nil
-
-
-# Notes: #
-1. endpoint is the name of your API below example is facts is your endpoint
-
-# Example #
-```
-https://dl.dropboxusercontent.com/s/2iodh4vg0eortkl/facts
-```
-
-*/
 // MARK: - TargetType
 extension Services : TargetType {
     var baseURL: URL {
         let baseUrl = App.String.BaseURL.url
         guard let url = URL(string: baseUrl) else {
-            fatalError("URL cannot be configured.")
+            fatalError(Error.Message.urlError)            
         }
         return url
     }

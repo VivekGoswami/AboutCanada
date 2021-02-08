@@ -28,3 +28,8 @@ struct Network {
 struct Image {
     static let placeholder = "placeholder"
 }
+struct Error {
+    struct Message {
+        static let urlError = "URL cannot be configured."
+    }
+}

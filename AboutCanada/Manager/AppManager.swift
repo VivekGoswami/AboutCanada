@@ -28,7 +28,7 @@ enum AppStatusType : Int {
     case development
     case production
 }
-class AppManager: NSObject {
+final class AppManager: NSObject {
     
     static let shared = AppManager()
     

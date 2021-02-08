@@ -10,13 +10,16 @@ import UIKit
 
 class AboutImageView: UIImageView {
 
+    /// Imageview property set Border, Shadow, content mode
+    
     override init(frame: CGRect = .zero) {
         super.init(frame: frame)
         translatesAutoresizingMaskIntoConstraints = false
         layer.cornerRadius = 10.0
-        layer.shadowOffset = CGSize(width: -2, height: 2)
-        layer.shadowOpacity = 0.5
 
+        layer.borderWidth = 0.5
+        layer.borderColor = UIColor.lightGray.cgColor
+        
         contentMode = .scaleAspectFill
         clipsToBounds = true
     }

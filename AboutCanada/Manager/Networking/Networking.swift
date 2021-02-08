@@ -16,7 +16,7 @@ typealias SuccessHandler<T: Mappable> = ((T) -> Void)
 typealias FailureHandler = ((Int?, String?) -> Void)
 
 /**
- Networking manager for API request with single or list object
+ Networking manager for API request with single object
  
  - parameter target: Pass service name with dot syntax.
  - returns: Response with generic model so you can convert into passed model type
@@ -24,7 +24,7 @@ typealias FailureHandler = ((Int?, String?) -> Void)
  
  
  # Notes: #
- 1. For single object Use requestObject method for Array or list of objects use requestList
+ 1. For single object Use requestObject method
  
  # Example #
  ```
@@ -41,21 +41,23 @@ class Networking :  NSObject {
         }
         DispatchQueue.main.async {
             SVProgressHUD.show()
-            SVProgressHUD.setDefaultMaskType(.gradient)
+            SVProgressHUD.setDefaultMaskType(.clear)
+            UIApplication.shared.isNetworkActivityIndicatorVisible = true
         }
         provider.request(target) { (result) in
+            DispatchQueue.main.asyncAfter(deadline: .now() + 1, execute: {
+                UIApplication.shared.isNetworkActivityIndicatorVisible = false
+                SVProgressHUD.dismiss()
+            })
             switch result {
             case .success(let response):
-                DispatchQueue.main.async {
-                    sleep(1)
-                    SVProgressHUD.dismiss()
-                }
                 do {
                     let stringToISOLatin = String(data: response.data, encoding: .isoLatin1)
                     guard let dataUTF8 = stringToISOLatin?.data(using: String.Encoding.utf8) else {
                         return
                     }
                     let convertedResponse = Response(statusCode: response.statusCode, data: dataUTF8)
+                    /// Keypath will be set from Services for reponse object which needs to be parsed
                     if let keyPath = target.keyPath {
                         let json = try convertedResponse.mapObject(T.self, atKeyPath: keyPath)
                         completion?(json)

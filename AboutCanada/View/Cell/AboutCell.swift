@@ -31,7 +31,7 @@ class AboutCell: UITableViewCell {
         label.numberOfLines = 0
         return label
     }()
-    // Specify method or properties which you want to load when cell create
+    /// Specify method or properties which you want to load when cell create
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         setTitleLabel()
@@ -60,12 +60,18 @@ class AboutCell: UITableViewCell {
         descriptionLabel.translatesAutoresizingMaskIntoConstraints = false
     }
     // MARK: - ImageView Properties
-    /* Imageview use as custom imageview you can set option in AboutImageView class */
+    /// Imageview use as custom imageview you can set option in AboutImageView class
     private func setImageView() {
         contentView.addSubview(aboutImageView)
         aboutImageView.translatesAutoresizingMaskIntoConstraints = false
     }
-    // setup views constraints
+    /// Constraint of cell set from here
+    /// Contenthugging priority added in description lable high for manage cell size based on content
+    /// Imageview size fixed give priority low
+    ///
+    /// - Parameter value: nil
+    /// - Returns: nil
+    ///
     private func setupConstraints() {
         NSLayoutConstraint.activate([
             aboutImageView.leftAnchor.constraint(equalTo: contentView.leftAnchor, constant: 10),
@@ -85,15 +91,23 @@ class AboutCell: UITableViewCell {
         ])
         descriptionLabel.setContentHuggingPriority(.defaultHigh, for: .vertical)
     }
-    func setRecord() {
+    
+    /// Item object set from datasource value will be set here
+    ///
+    /// - Parameter value: nil
+    /// - Returns: nil
+    ///
+    private func setRecord() {
         self.titleLabel.text = self.item?.title
         self.descriptionLabel.text = self.item?.description
         
         if let strURL = self.item?.imageHref,let url = URL(string: strURL) {
             self.aboutImageView.sd_setImage(with: url, placeholderImage:UIImage(named: Image.placeholder), options: .refreshCached)
         } else {
+            /// Image load from URL when it's not available default image will be show
             self.aboutImageView.image = UIImage(named: Image.placeholder)
         }
+        /// Layout will be updated when set image and content of lable
         setNeedsLayout()
     }
 }

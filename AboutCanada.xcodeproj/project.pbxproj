@@ -29,6 +29,8 @@
 		DFBEC69C25CFE66600E097EA /* AboutCanada.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFBEC69A25CFE66600E097EA /* AboutCanada.swift */; };
 		DFBEC6A025D0073500E097EA /* AboutCanadaViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFBEC69F25D0073500E097EA /* AboutCanadaViewModel.swift */; };
 		DFBEC6A425D0680B00E097EA /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFBEC6A325D0680B00E097EA /* Extensions.swift */; };
+		DFF85B7525D131D3000BEC2B /* NetworkingTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFF85B7425D131D3000BEC2B /* NetworkingTestCase.swift */; };
+		DFF85B7725D13936000BEC2B /* AboutCanadaViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFF85B7625D13936000BEC2B /* AboutCanadaViewModelTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -72,6 +74,8 @@
 		DFBEC69A25CFE66600E097EA /* AboutCanada.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AboutCanada.swift; sourceTree = "<group>"; };
 		DFBEC69F25D0073500E097EA /* AboutCanadaViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutCanadaViewModel.swift; sourceTree = "<group>"; };
 		DFBEC6A325D0680B00E097EA /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		DFF85B7425D131D3000BEC2B /* NetworkingTestCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingTestCase.swift; sourceTree = "<group>"; };
+		DFF85B7625D13936000BEC2B /* AboutCanadaViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutCanadaViewModelTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -144,6 +148,8 @@
 			isa = PBXGroup;
 			children = (
 				DFBEC66325CDB02F00E097EA /* AboutCanadaTests.swift */,
+				DFF85B7425D131D3000BEC2B /* NetworkingTestCase.swift */,
+				DFF85B7625D13936000BEC2B /* AboutCanadaViewModelTests.swift */,
 				DFBEC66525CDB02F00E097EA /* Info.plist */,
 			);
 			path = AboutCanadaTests;
@@ -171,8 +177,8 @@
 			isa = PBXGroup;
 			children = (
 				DFBEC68225CDC0D000E097EA /* Cell */,
-				DFBEC67125CDB0E000E097EA /* LaunchScreen.storyboard */,
 				DFBEC68B25CFA97800E097EA /* AboutImageView.swift */,
+				DFBEC67125CDB0E000E097EA /* LaunchScreen.storyboard */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -469,6 +475,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				DFBEC66425CDB02F00E097EA /* AboutCanadaTests.swift in Sources */,
+				DFF85B7725D13936000BEC2B /* AboutCanadaViewModelTests.swift in Sources */,
+				DFF85B7525D131D3000BEC2B /* NetworkingTestCase.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

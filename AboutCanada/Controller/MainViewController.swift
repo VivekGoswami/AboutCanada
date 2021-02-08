@@ -10,7 +10,9 @@ import UIKit
 
 class MainViewController: UIViewController {
 
-    private var viewModel : AboutCanadaViewModel?
+    private lazy var viewModel: AboutCanadaViewModel = {
+        return AboutCanadaViewModel()
+    }()
     private var dataSource : MainTableViewDataSource<AboutCell,Rows>?
 
     lazy var tableView: UITableView = {
@@ -29,31 +31,34 @@ class MainViewController: UIViewController {
         self.tableViewContstraint()
         self.callToViewModelForUIUpdate()
     }
-    func callToViewModelForUIUpdate() {
-        self.viewModel =  AboutCanadaViewModel()
-        self.viewModel?.bindAboutCanadaViewModelToController = {
+    /// Data binding on tableview by calling API request
+    private func callToViewModelForUIUpdate() {
+        self.viewModel.bindAboutCanadaViewModelToController = {
             self.updateDataSource()
         }
     }
-    func updateDataSource() {
-        guard let rows = self.viewModel?.record?.rows else { return }
+    /// Datasource will update and generate cell by items
+    private func updateDataSource() {
+        guard let rows = self.viewModel.record?.rows else { return }
         self.dataSource = MainTableViewDataSource(cellIdentifier: AboutCell.identifier, items: rows, configureCell: { (cell, item) in
             cell.item = item
         })
         
         DispatchQueue.main.async {
-            self.title = self.viewModel?.record?.title
+            /// Title will be set after API response set in ViewModel
+            self.title = self.viewModel.record?.title
             self.tableView.dataSource = self.dataSource
             self.tableView.reloadAsync()
         }
     }
     private func setupUI() {
         self.view.backgroundColor = .white
-        self.view.addSubview(tableView)
+        self.view.addSubview(self.tableView)
         
         let leftButton =  UIBarButtonItem(title: BarButton.Title.reload, style:.plain, target: self, action: #selector(self.refreshTableData))
         self.navigationItem.rightBarButtonItem = leftButton
     }
+    /// Constraint set for tablview on screen
     private func tableViewContstraint() {
         self.tableView.topAnchor.constraint(equalTo:view.safeAreaLayoutGuide.topAnchor).isActive = true
         self.tableView.leadingAnchor.constraint(equalTo:view.safeAreaLayoutGuide.leadingAnchor).isActive = true
@@ -64,6 +69,6 @@ class MainViewController: UIViewController {
 extension MainViewController {
     // MARK: - Refresh content
     @IBAction func refreshTableData() {
-        self.viewModel?.getRecords()
+        self.viewModel.getRecords()
     }
 }

@@ -7,12 +7,13 @@
 //
 
 import UIKit
-
+/// Cell identifier use same as class name instead of raw
 extension UITableViewCell {
     @objc class var identifier: String {
         return String(describing: self)
     }
 }
+/// Tableview reload in main thread
 extension UITableView {
     func reloadAsync() {
         DispatchQueue.main.async {
