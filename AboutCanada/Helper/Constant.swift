@@ -31,5 +31,6 @@ struct Image {
 struct Error {
     struct Message {
         static let urlError = "URL cannot be configured."
+        static let deserialized = "Deserialized object is not a dictionary"
     }
 }

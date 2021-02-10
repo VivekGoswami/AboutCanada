@@ -2,14 +2,8 @@ PODS:
   - Alamofire (5.2.2)
   - Moya (14.0.0):
     - Moya/Core (= 14.0.0)
-  - Moya-ObjectMapper (2.9):
-    - Moya-ObjectMapper/Core (= 2.9)
-  - Moya-ObjectMapper/Core (2.9):
-    - Moya (~> 14.0.0-beta.6)
-    - ObjectMapper
   - Moya/Core (14.0.0):
     - Alamofire (~> 5.0)
-  - ObjectMapper (4.2.0)
   - ReachabilitySwift (5.0.0)
   - SDWebImage (5.10.4):
     - SDWebImage/Core (= 5.10.4)
@@ -19,7 +13,6 @@ PODS:
 
 DEPENDENCIES:
   - Moya (~> 14.0)
-  - Moya-ObjectMapper (~> 2.9)
   - ReachabilitySwift (~> 5.0)
   - SDWebImage (~> 5.0)
   - SVProgressHUD (~> 2.2)
@@ -29,8 +22,6 @@ SPEC REPOS:
   trunk:
     - Alamofire
     - Moya
-    - Moya-ObjectMapper
-    - ObjectMapper
     - ReachabilitySwift
     - SDWebImage
     - SVProgressHUD
@@ -39,13 +30,11 @@ SPEC REPOS:
 SPEC CHECKSUMS:
   Alamofire: 814429acc853c6c54ff123fc3d2ef66803823ce0
   Moya: 5b45dacb75adb009f97fde91c204c1e565d31916
-  Moya-ObjectMapper: 967a99d9ea3aa9c93ddbe112aeca3667f53bfe93
-  ObjectMapper: 1eb41f610210777375fa806bf161dc39fb832b81
   ReachabilitySwift: 985039c6f7b23a1da463388634119492ff86c825
   SDWebImage: c666b97e1fa9c64b4909816a903322018f0a9c84
   SVProgressHUD: 1428aafac632c1f86f62aa4243ec12008d7a51d6
   SwiftLint: 4fa9579c63416865179bc416f0a92d55f009600d
 
-PODFILE CHECKSUM: 293f003d8332b489a63c371b39d6c9e205b7ce5b
+PODFILE CHECKSUM: 208539ce3ed12cb3e0f2fac58c7b916ca6d351b2
 
 COCOAPODS: 1.10.0.beta.2

@@ -11,12 +11,10 @@ import XCTest
 
 class AboutCanadaViewModelTests: XCTestCase {
 
-    var mockAPIService : Networking?
-    var sut : AboutCanadaViewModel?
-    
+    var mockAPIService: Networking?
+    var sut: AboutCanadaViewModel?
     override func setUp() {
         super.setUp()
-        
         sut = AboutCanadaViewModel()
         mockAPIService = Networking()
     }
@@ -25,12 +23,9 @@ class AboutCanadaViewModelTests: XCTestCase {
         sut = nil
         super.tearDown()
     }
-    
-    func test_fetch_record(){
-        
+    func test_fetch_record() {
         let expect = XCTestExpectation(description: "callback")
-        
-        let request : Services = .aboutCanada
+        let request: Services = .aboutCanada
         mockAPIService?.requestObject(request, completion: { (records: AboutCanada) in
             expect.fulfill()
             XCTAssertEqual( records.rows?.count, 14)
@@ -38,34 +33,28 @@ class AboutCanadaViewModelTests: XCTestCase {
         wait(for: [expect], timeout: 3.1)
     }
     func test_cell_view_model() {
-        //Given photos
-        
+        // Given photos
         let rowWithData = Rows()
         rowWithData.title = "Demo"
         rowWithData.description = "Description will come here"
-        rowWithData.imageHref = "http://static.guim.co.uk/sys-images/Music/Pix/site_furniture/2007/04/19/avril_lavigne.jpg"
-        
+        rowWithData.photoUrl = "https://picsum.photos/200"
         let rowWithoutDescription = Rows()
         rowWithoutDescription.title = "Demo"
         rowWithoutDescription.description = nil
-        rowWithoutDescription.imageHref = "http://static.guim.co.uk/sys-images/Music/Pix/site_furniture/2007/04/19/avril_lavigne.jpg"
-        
+        rowWithoutDescription.photoUrl = "https://picsum.photos/200"
         let rowWithoutTitle = Rows()
         rowWithoutTitle.title = nil
         rowWithoutTitle.description = "Test message"
-        rowWithoutTitle.imageHref = "http://static.guim.co.uk/sys-images/Music/Pix/site_furniture/2007/04/19/avril_lavigne.jpg"
-        
+        rowWithoutTitle.photoUrl = "https://picsum.photos/200"
         let rowWithoutData = Rows()
         rowWithoutData.title = nil
         rowWithoutData.description = nil
-        rowWithoutData.imageHref = nil
-        
+        rowWithoutData.photoUrl = nil
         let cellViewModelWithoutDesc = sut?.record?.rows?.first
         let cellViewModelWithoutTitle = sut?.record?.rows?.first
         let cellViewModelWithoutData = sut?.record?.rows?.first
-        
         XCTAssertEqual(cellViewModelWithoutDesc?.description, rowWithoutDescription.description )
         XCTAssertEqual(cellViewModelWithoutTitle?.title, rowWithoutTitle.title )
-        XCTAssertEqual(cellViewModelWithoutData?.imageHref, nil)
+        XCTAssertEqual(cellViewModelWithoutData?.photoUrl, nil)
     }
 }

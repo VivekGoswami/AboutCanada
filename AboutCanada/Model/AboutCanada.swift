@@ -7,40 +7,21 @@
 //
 
 import Foundation
-import ObjectMapper
 
-class AboutCanada : Model {
-	var title : String?
-	var rows : [Rows]?
-
-	required init() {
-        super.init()
-    }
-    required init?(map: Map) {
-        super.init(map: map)
-    }
-    
-    override func mapping(map: Map) {
-		title       <- map["title"]
-		rows        <- map["rows"]
-	}
-}
-class Rows : Model {
-    var title : String?
-    var description : String?
-    var imageHref : String?
-
-    required init() {
-        super.init()
-    }
-    required init?(map: Map) {
-        super.init(map: map)
-    }
-    
-    override func mapping(map: Map) {
-
-        title           <- map["title"]
-        description     <- map["description"]
-        imageHref       <- map["imageHref"]
+class AboutCanada: Codable {
+    var title: String?
+    var rows: [Rows]?
+    private enum CodingKeys: String, CodingKey {
+        case title
+        case rows
+    }}
+class Rows: Codable {
+    var title: String?
+    var description: String?
+    var photoUrl: String?
+    private enum CodingKeys: String, CodingKey {
+        case title = "title"
+        case description = "description"
+        case photoUrl = "imageHref"
     }
 }

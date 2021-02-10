@@ -26,16 +26,14 @@ import SVProgressHUD
  ```
  
  */
-var baseURL : String {
+var baseURL: String {
     if AppManager.shared.appStatus == .production {
         return API.productionURL // Live
     }
     return API.developmentURL // Development
 }
 struct App {
-    struct String {
-        struct BaseURL {
-            static let url = baseURL
-        }
+    struct BaseURL {
+        static let url = baseURL
     }
 }

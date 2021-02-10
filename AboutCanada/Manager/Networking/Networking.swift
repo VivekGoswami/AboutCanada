@@ -8,12 +8,10 @@
 
 import UIKit
 import Moya
-import Moya_ObjectMapper
-import ObjectMapper
 import SVProgressHUD
 
-typealias SuccessHandler<T: Mappable> = ((T) -> Void)
-typealias FailureHandler = ((Int?, String?) -> Void)
+typealias Success<T: Codable> = ((T) -> Void)
+typealias Failure = ((Int?, String?) -> Void)
 
 /**
  Networking manager for API request with single object
@@ -32,11 +30,10 @@ typealias FailureHandler = ((Int?, String?) -> Void)
  ```
  
  */
-class Networking :  NSObject {
-    func requestObject<T: Mappable>(_ target: Services, completion: SuccessHandler<T>? = nil, ErrorBlock errorBlock : FailureHandler? = nil) {
-        
+class Networking: NSObject {
+    func requestObject<T: Codable>(_ target: Services, completion: Success<T>? = nil, errorBlock: Failure? = nil) {
         if !NetworkListner.shared.isReachable {
-            SVProgressHUD.showError(withStatus:Network.Message.unavailable)
+            SVProgressHUD.showError(withStatus: Network.Message.unavailable)
             return
         }
         DispatchQueue.main.async {
@@ -59,10 +56,10 @@ class Networking :  NSObject {
                     let convertedResponse = Response(statusCode: response.statusCode, data: dataUTF8)
                     /// Keypath will be set from Services for reponse object which needs to be parsed
                     if let keyPath = target.keyPath {
-                        let json = try convertedResponse.mapObject(T.self, atKeyPath: keyPath)
+                        let json = try convertedResponse.map(T.self, atKeyPath: keyPath)
                         completion?(json)
                     } else {
-                        let json = try convertedResponse.mapObject(T.self)
+                        let json = try convertedResponse.map(T.self)
                         completion?(json)
                     }
                 } catch {

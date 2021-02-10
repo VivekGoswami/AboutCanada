@@ -6,13 +6,16 @@ target 'AboutCanada' do
   use_frameworks!
   pod 'Moya', '~> 14.0'
   pod 'SVProgressHUD', '~> 2.2'
-  pod 'Moya-ObjectMapper', '~> 2.9'
   pod 'ReachabilitySwift', '~> 5.0'
   pod 'SwiftLint', '~> 0.42'
   pod 'SDWebImage', '~> 5.0'
   # Pods for AboutCanada
 
   target 'AboutCanadaTests' do
+    inherit! :search_paths
+    # Pods for testing
+  end
+  target 'AboutCanadaUITests' do
     inherit! :search_paths
     # Pods for testing
   end

@@ -11,8 +11,7 @@ import XCTest
 
 class NetworkingTestCase: XCTestCase {
 
-    var networking : Networking?
-    
+    var networking: Networking?
     override func setUp() {
         super.setUp()
         networking = Networking()
@@ -21,12 +20,10 @@ class NetworkingTestCase: XCTestCase {
         networking = nil
         super.tearDown()
     }
-    func test_fetch_record(){
-        
+    func test_fetch_record() {
         let expect = XCTestExpectation(description: "callback")
-        
-        let request : Services = .aboutCanada
-        networking?.requestObject(request, completion: { (records: AboutCanada) in
+        let request: Services = .aboutCanada
+        networking?.requestObject(request, completion: { (_: AboutCanada) in
             expect.fulfill()
         })
         wait(for: [expect], timeout: 3.1)

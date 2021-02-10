@@ -10,24 +10,17 @@ import UIKit
 import Reachability
 
 final class NetworkListner {
-    
     enum ReachabilityStatus: Equatable {
         case connected
         case disconnected
     }
-    
     static let shared = NetworkListner()
-    
     private let reachability = try? Reachability()
-    
     var reachabilityObserver: ((ReachabilityStatus) -> Void)?
-    
     private(set) var reachabilityStatus: ReachabilityStatus = .connected
-    
     private init() {
         setupReachability()
     }
-    
     /// setup observer to detect reachability changes
     private func setupReachability() {
         let reachabilityStatusObserver: ((Reachability) -> Void) = { [unowned self] (reachability: Reachability) in
@@ -36,7 +29,6 @@ final class NetworkListner {
         reachability?.whenReachable = reachabilityStatusObserver
         reachability?.whenUnreachable = reachabilityStatusObserver
     }
-    
     /// Start observing reachability changes
     func startNotifier() {
         do {
@@ -72,7 +64,6 @@ final class NetworkListner {
             userInfo: ["ReachabilityStatus": status]
         )
     }
-    
     /// returns current reachability status
     var isReachable: Bool {
         return reachability?.connection != .unavailable
@@ -81,17 +72,14 @@ final class NetworkListner {
     var isConnectedViaCellularOrWifi: Bool {
         return isConnectedViaCellular || isConnectedViaWiFi
     }
-    
     /// returns if connected via cellular
     var isConnectedViaCellular: Bool {
         return reachability?.connection == .cellular
     }
-    
     /// returns if connected via cellular
     var isConnectedViaWiFi: Bool {
         return reachability?.connection == .wifi
     }
-    
     deinit {
         stopNotifier()
     }

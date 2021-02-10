@@ -34,12 +34,10 @@ enum Services {
 }
 
 // MARK: - TargetType
-extension Services : TargetType {
+extension Services: TargetType {
     var baseURL: URL {
-        let baseUrl = App.String.BaseURL.url
-        guard let url = URL(string: baseUrl) else {
-            fatalError(Error.Message.urlError)            
-        }
+        let baseUrl = App.BaseURL.url
+        guard let url = URL(string: baseUrl) else { fatalError(Error.Message.urlError) }
         return url
     }
     var path: String {
@@ -69,7 +67,7 @@ extension Services : TargetType {
             return [:]
         }
     }
-    var headers: [String : String]? {
+    var headers: [String: String]? {
         return ["Content-type": "application/json"]
     }
     /**
@@ -87,7 +85,7 @@ extension Services : TargetType {
     ```
     ```
     */
-    var keyPath : String? {
+    var keyPath: String? {
         switch self {
         case .aboutCanada:
             return nil

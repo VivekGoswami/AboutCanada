@@ -24,16 +24,13 @@ import SVProgressHUD
  ```
  
  */
-enum AppStatusType : Int {
+enum AppStatusType: Int {
     case development
     case production
 }
 final class AppManager: NSObject {
-    
     static let shared = AppManager()
-    
-    var appStatus : AppStatusType = .development
-    
+    var appStatus: AppStatusType = .development
     // MARK: - Members
     override init() {
         super.init()
@@ -48,7 +45,7 @@ extension AppManager {
             case .connected:
                 break
             case .disconnected:
-                SVProgressHUD.showError(withStatus:Network.Message.unavailable)
+                SVProgressHUD.showError(withStatus: Network.Message.unavailable)
             }
         }
     }
