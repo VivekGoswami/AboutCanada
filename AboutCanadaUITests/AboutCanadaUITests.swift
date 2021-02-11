@@ -18,8 +18,6 @@ class AboutCanadaUITests: XCTestCase {
 
         // In UI tests it is usually best to stop immediately when a failure occurs.
         continueAfterFailure = false
-
-        // In UI tests it’s important to set the initial state - such as interface orientation - required for your tests before they run. The setUp method is a good place to do this.
     }
 
     override func tearDownWithError() throws {
@@ -67,17 +65,19 @@ class AboutCanadaUITests: XCTestCase {
         XCTAssertTrue(viewControllerUnderTest.responds(to: #selector(dataSource?.tableView(_:cellForRowAt:))))
     }
     func testTableViewCellHasReuseIdentifier() {
-        let cell = dataSource?.tableView(viewControllerUnderTest.tableView, cellForRowAt: IndexPath(row: 0, section: 0)) as? AboutCell
+        let tableview = viewControllerUnderTest.tableView
+        let cell = dataSource?.tableView(tableview, cellForRowAt: IndexPath(row: 0, section: 0)) as? AboutCell
         let actualReuseIdentifer = cell?.reuseIdentifier
         let expectedReuseIdentifier = "AboutCell"
         XCTAssertEqual(actualReuseIdentifer, expectedReuseIdentifier)
     }
     func testTableCellHasCorrectLabelText() {
-        let cell0 = dataSource?.tableView(viewControllerUnderTest.tableView, cellForRowAt: IndexPath(row: 0, section: 0)) as? AboutCell
+        let tableview = viewControllerUnderTest.tableView
+        let cell0 = dataSource?.tableView(tableview, cellForRowAt: IndexPath(row: 0, section: 0)) as? AboutCell
         XCTAssertEqual(cell0?.titleLabel.text, "one")
-        let cell1 = dataSource?.tableView(viewControllerUnderTest.tableView, cellForRowAt: IndexPath(row: 1, section: 0)) as? AboutCell
+        let cell1 = dataSource?.tableView(tableview, cellForRowAt: IndexPath(row: 1, section: 0)) as? AboutCell
         XCTAssertEqual(cell1?.titleLabel.text, "two")
-        let cell2 = dataSource?.tableView(viewControllerUnderTest.tableView, cellForRowAt: IndexPath(row: 2, section: 0)) as? AboutCell
+        let cell2 = dataSource?.tableView(tableview, cellForRowAt: IndexPath(row: 2, section: 0)) as? AboutCell
         XCTAssertEqual(cell2?.titleLabel.text, "three")
     }
 }

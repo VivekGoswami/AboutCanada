@@ -7,8 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		419969D20656A6F93A2BE2D9 /* Pods_AboutCanadaUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3DE482AB57FA60D635532375 /* Pods_AboutCanadaUITests.framework */; };
 		957F47B4C6467C656F734FCD /* Pods_AboutCanada.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 23389390A85848E17F53B67A /* Pods_AboutCanada.framework */; };
 		D7BD652513FA0981260A499E /* Pods_AboutCanadaTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 70D781A7A4F6F40BA6B2CDF5 /* Pods_AboutCanadaTests.framework */; };
+		DF3E28E925D523D00030D335 /* Rows.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF3E28E825D523D00030D335 /* Rows.swift */; };
+		DF3E28EB25D5242D0030D335 /* Codable+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF3E28EA25D5242D0030D335 /* Codable+Extension.swift */; };
+		DF3E28EF25D530F90030D335 /* AppManager+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF3E28EE25D530F90030D335 /* AppManager+Extension.swift */; };
 		DF4E943E25D3F81100CB140D /* AboutCanadaUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF4E943D25D3F81100CB140D /* AboutCanadaUITests.swift */; };
 		DFBEC64D25CDB02D00E097EA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFBEC64C25CDB02D00E097EA /* AppDelegate.swift */; };
 		DFBEC65125CDB02D00E097EA /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFBEC65025CDB02D00E097EA /* MainViewController.swift */; };
@@ -27,7 +31,7 @@
 		DFBEC69825CFE63100E097EA /* Resource.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFBEC69525CFE63100E097EA /* Resource.swift */; };
 		DFBEC69C25CFE66600E097EA /* AboutCanada.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFBEC69A25CFE66600E097EA /* AboutCanada.swift */; };
 		DFBEC6A025D0073500E097EA /* AboutCanadaViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFBEC69F25D0073500E097EA /* AboutCanadaViewModel.swift */; };
-		DFBEC6A425D0680B00E097EA /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFBEC6A325D0680B00E097EA /* Extensions.swift */; };
+		DFBEC6A425D0680B00E097EA /* NSLayoutConstraint+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFBEC6A325D0680B00E097EA /* NSLayoutConstraint+Extensions.swift */; };
 		DFF85B7525D131D3000BEC2B /* NetworkingTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFF85B7425D131D3000BEC2B /* NetworkingTestCase.swift */; };
 		DFF85B7725D13936000BEC2B /* AboutCanadaViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFF85B7625D13936000BEC2B /* AboutCanadaViewModelTests.swift */; };
 /* End PBXBuildFile section */
@@ -64,10 +68,16 @@
 /* Begin PBXFileReference section */
 		179F7962D19980FAB1F0F14F /* Pods-AboutCanada.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AboutCanada.debug.xcconfig"; path = "Target Support Files/Pods-AboutCanada/Pods-AboutCanada.debug.xcconfig"; sourceTree = "<group>"; };
 		23389390A85848E17F53B67A /* Pods_AboutCanada.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AboutCanada.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3DE482AB57FA60D635532375 /* Pods_AboutCanadaUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AboutCanadaUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		61368D41ED0A0A4AFC6ACAA4 /* Pods-AboutCanadaUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AboutCanadaUITests.release.xcconfig"; path = "Target Support Files/Pods-AboutCanadaUITests/Pods-AboutCanadaUITests.release.xcconfig"; sourceTree = "<group>"; };
 		6CAB43A627EE786F93ADC6F6 /* Pods-AboutCanadaTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AboutCanadaTests.debug.xcconfig"; path = "Target Support Files/Pods-AboutCanadaTests/Pods-AboutCanadaTests.debug.xcconfig"; sourceTree = "<group>"; };
 		70D781A7A4F6F40BA6B2CDF5 /* Pods_AboutCanadaTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AboutCanadaTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		91E56B877A23EDBA63A91725 /* Pods-AboutCanada.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AboutCanada.release.xcconfig"; path = "Target Support Files/Pods-AboutCanada/Pods-AboutCanada.release.xcconfig"; sourceTree = "<group>"; };
+		AE60AEFA089E3437A28CBB9E /* Pods-AboutCanadaUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AboutCanadaUITests.debug.xcconfig"; path = "Target Support Files/Pods-AboutCanadaUITests/Pods-AboutCanadaUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		CB77449FF3510B513679B94B /* Pods-AboutCanadaTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AboutCanadaTests.release.xcconfig"; path = "Target Support Files/Pods-AboutCanadaTests/Pods-AboutCanadaTests.release.xcconfig"; sourceTree = "<group>"; };
+		DF3E28E825D523D00030D335 /* Rows.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rows.swift; sourceTree = "<group>"; };
+		DF3E28EA25D5242D0030D335 /* Codable+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Codable+Extension.swift"; sourceTree = "<group>"; };
+		DF3E28EE25D530F90030D335 /* AppManager+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AppManager+Extension.swift"; sourceTree = "<group>"; };
 		DF4E943B25D3F81100CB140D /* AboutCanadaUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AboutCanadaUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DF4E943D25D3F81100CB140D /* AboutCanadaUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutCanadaUITests.swift; sourceTree = "<group>"; };
 		DF4E943F25D3F81100CB140D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -92,7 +102,7 @@
 		DFBEC69525CFE63100E097EA /* Resource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Resource.swift; sourceTree = "<group>"; };
 		DFBEC69A25CFE66600E097EA /* AboutCanada.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AboutCanada.swift; sourceTree = "<group>"; };
 		DFBEC69F25D0073500E097EA /* AboutCanadaViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutCanadaViewModel.swift; sourceTree = "<group>"; };
-		DFBEC6A325D0680B00E097EA /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		DFBEC6A325D0680B00E097EA /* NSLayoutConstraint+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSLayoutConstraint+Extensions.swift"; sourceTree = "<group>"; };
 		DFF85B7425D131D3000BEC2B /* NetworkingTestCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingTestCase.swift; sourceTree = "<group>"; };
 		DFF85B7625D13936000BEC2B /* AboutCanadaViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutCanadaViewModelTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -102,6 +112,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				419969D20656A6F93A2BE2D9 /* Pods_AboutCanadaUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -129,6 +140,7 @@
 			children = (
 				23389390A85848E17F53B67A /* Pods_AboutCanada.framework */,
 				70D781A7A4F6F40BA6B2CDF5 /* Pods_AboutCanadaTests.framework */,
+				3DE482AB57FA60D635532375 /* Pods_AboutCanadaUITests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -232,6 +244,7 @@
 			isa = PBXGroup;
 			children = (
 				DFBEC69A25CFE66600E097EA /* AboutCanada.swift */,
+				DF3E28E825D523D00030D335 /* Rows.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -264,8 +277,10 @@
 		DFBEC67B25CDB3D500E097EA /* Extension */ = {
 			isa = PBXGroup;
 			children = (
-				DFBEC6A325D0680B00E097EA /* Extensions.swift */,
+				DFBEC6A325D0680B00E097EA /* NSLayoutConstraint+Extensions.swift */,
 				DFBEC68725CDC2DC00E097EA /* UITableView+Extension.swift */,
+				DF3E28EA25D5242D0030D335 /* Codable+Extension.swift */,
+				DF3E28EE25D530F90030D335 /* AppManager+Extension.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -295,6 +310,8 @@
 				91E56B877A23EDBA63A91725 /* Pods-AboutCanada.release.xcconfig */,
 				6CAB43A627EE786F93ADC6F6 /* Pods-AboutCanadaTests.debug.xcconfig */,
 				CB77449FF3510B513679B94B /* Pods-AboutCanadaTests.release.xcconfig */,
+				AE60AEFA089E3437A28CBB9E /* Pods-AboutCanadaUITests.debug.xcconfig */,
+				61368D41ED0A0A4AFC6ACAA4 /* Pods-AboutCanadaUITests.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -306,6 +323,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = DF4E944225D3F81100CB140D /* Build configuration list for PBXNativeTarget "AboutCanadaUITests" */;
 			buildPhases = (
+				87D982E9671E5981A48B8114 /* [CP] Check Pods Manifest.lock */,
 				DF4E943725D3F81100CB140D /* Sources */,
 				DF4E943825D3F81100CB140D /* Frameworks */,
 				DF4E943925D3F81100CB140D /* Resources */,
@@ -470,6 +488,28 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		87D982E9671E5981A48B8114 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-AboutCanadaUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
 		BB59286B170895F00624FE39 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -525,10 +565,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DF3E28E925D523D00030D335 /* Rows.swift in Sources */,
 				DFBEC69825CFE63100E097EA /* Resource.swift in Sources */,
 				DFBEC68625CDC17500E097EA /* Constant.swift in Sources */,
 				DFBEC65125CDB02D00E097EA /* MainViewController.swift in Sources */,
 				DFBEC68E25CFC25400E097EA /* NetworkListner.swift in Sources */,
+				DF3E28EB25D5242D0030D335 /* Codable+Extension.swift in Sources */,
 				DFBEC6A025D0073500E097EA /* AboutCanadaViewModel.swift in Sources */,
 				DFBEC69725CFE63100E097EA /* Networking.swift in Sources */,
 				DFBEC69625CFE63100E097EA /* Services.swift in Sources */,
@@ -537,7 +579,8 @@
 				DFBEC68C25CFA97800E097EA /* AboutImageView.swift in Sources */,
 				DFBEC68425CDC10700E097EA /* AboutCell.swift in Sources */,
 				DFBEC68A25CDC98400E097EA /* MainTableViewDataSource.swift in Sources */,
-				DFBEC6A425D0680B00E097EA /* Extensions.swift in Sources */,
+				DFBEC6A425D0680B00E097EA /* NSLayoutConstraint+Extensions.swift in Sources */,
+				DF3E28EF25D530F90030D335 /* AppManager+Extension.swift in Sources */,
 				DFBEC68825CDC2DC00E097EA /* UITableView+Extension.swift in Sources */,
 				DFBEC69C25CFE66600E097EA /* AboutCanada.swift in Sources */,
 			);
@@ -581,6 +624,7 @@
 /* Begin XCBuildConfiguration section */
 		DF4E944325D3F81100CB140D /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = AE60AEFA089E3437A28CBB9E /* Pods-AboutCanadaUITests.debug.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = AboutCanadaUITests/Info.plist;
@@ -599,6 +643,7 @@
 		};
 		DF4E944425D3F81100CB140D /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 61368D41ED0A0A4AFC6ACAA4 /* Pods-AboutCanadaUITests.release.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = AboutCanadaUITests/Info.plist;

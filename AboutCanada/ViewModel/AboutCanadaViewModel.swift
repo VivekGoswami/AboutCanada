@@ -30,7 +30,7 @@ class AboutCanadaViewModel: NSObject {
     ///
     func getRecords() {
         self.networking?.requestObject(.aboutCanada, completion: { (records: AboutCanada) in
-            self.manageBlankRecords(records: records)
+            self.setRecordsInModel(records: records)
         })
     }
     /// Manage server reponse to remove blank or nil records from array.
@@ -38,31 +38,7 @@ class AboutCanadaViewModel: NSObject {
     /// - Parameter value: record
     /// - Returns: nil
     ///
-    private func manageBlankRecords(records: AboutCanada) {
-        do {
-            let filter = try records.rows?.filter {
-                try $0.toDictionary().count != 0
-            }
-            let title = records.title
-            let canadaRecord = AboutCanada()
-            canadaRecord.title = title
-            canadaRecord.rows = filter
-            self.record = canadaRecord
-        } catch {
-            print(error)
-        }
-    }
-}
-extension Encodable {
-
-    /// Converting object to postable dictionary
-    func toDictionary(_ encoder: JSONEncoder = JSONEncoder()) throws -> [String: Any] {
-        let data = try encoder.encode(self)
-        let object = try JSONSerialization.jsonObject(with: data)
-        guard let json = object as? [String: Any] else {
-            let context = DecodingError.Context(codingPath: [], debugDescription: Error.Message.deserialized)
-            throw DecodingError.typeMismatch(type(of: object), context)
-        }
-        return json
+    private func setRecordsInModel(records: AboutCanada) {
+        self.record = records
     }
 }
