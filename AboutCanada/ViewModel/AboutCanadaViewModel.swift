@@ -30,7 +30,7 @@ class AboutCanadaViewModel: NSObject {
     ///
     func getRecords() {
         self.networking?.requestObject(.aboutCanada, completion: { (records: AboutCanada) in
-            self.setRecordsInModel(records: records)
+            self.manageBlankRecords(records: records)
         })
     }
     /// Manage server reponse to remove blank or nil records from array.
@@ -38,7 +38,18 @@ class AboutCanadaViewModel: NSObject {
     /// - Parameter value: record
     /// - Returns: nil
     ///
-    private func setRecordsInModel(records: AboutCanada) {
-        self.record = records
+    private func manageBlankRecords(records: AboutCanada) {
+        do {
+            let filter = try records.rows?.filter {
+                try $0.toDictionary().count != 0
+            }
+            let title = records.title
+            let canadaRecord = AboutCanada()
+            canadaRecord.title = title
+            canadaRecord.rows = filter
+            self.record = canadaRecord
+        } catch {
+            print(error)
+        }
     }
 }

@@ -68,13 +68,12 @@
 /* Begin PBXFileReference section */
 		179F7962D19980FAB1F0F14F /* Pods-AboutCanada.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AboutCanada.debug.xcconfig"; path = "Target Support Files/Pods-AboutCanada/Pods-AboutCanada.debug.xcconfig"; sourceTree = "<group>"; };
 		23389390A85848E17F53B67A /* Pods_AboutCanada.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AboutCanada.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2F5FFA14EE048032D16DEAD0 /* Pods-AboutCanadaTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AboutCanadaTests.debug.xcconfig"; path = "Target Support Files/Pods-AboutCanadaTests/Pods-AboutCanadaTests.debug.xcconfig"; sourceTree = "<group>"; };
 		3DE482AB57FA60D635532375 /* Pods_AboutCanadaUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AboutCanadaUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		61368D41ED0A0A4AFC6ACAA4 /* Pods-AboutCanadaUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AboutCanadaUITests.release.xcconfig"; path = "Target Support Files/Pods-AboutCanadaUITests/Pods-AboutCanadaUITests.release.xcconfig"; sourceTree = "<group>"; };
-		6CAB43A627EE786F93ADC6F6 /* Pods-AboutCanadaTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AboutCanadaTests.debug.xcconfig"; path = "Target Support Files/Pods-AboutCanadaTests/Pods-AboutCanadaTests.debug.xcconfig"; sourceTree = "<group>"; };
 		70D781A7A4F6F40BA6B2CDF5 /* Pods_AboutCanadaTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AboutCanadaTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		91E56B877A23EDBA63A91725 /* Pods-AboutCanada.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AboutCanada.release.xcconfig"; path = "Target Support Files/Pods-AboutCanada/Pods-AboutCanada.release.xcconfig"; sourceTree = "<group>"; };
 		AE60AEFA089E3437A28CBB9E /* Pods-AboutCanadaUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AboutCanadaUITests.debug.xcconfig"; path = "Target Support Files/Pods-AboutCanadaUITests/Pods-AboutCanadaUITests.debug.xcconfig"; sourceTree = "<group>"; };
-		CB77449FF3510B513679B94B /* Pods-AboutCanadaTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AboutCanadaTests.release.xcconfig"; path = "Target Support Files/Pods-AboutCanadaTests/Pods-AboutCanadaTests.release.xcconfig"; sourceTree = "<group>"; };
 		DF3E28E825D523D00030D335 /* Rows.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rows.swift; sourceTree = "<group>"; };
 		DF3E28EA25D5242D0030D335 /* Codable+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Codable+Extension.swift"; sourceTree = "<group>"; };
 		DF3E28EE25D530F90030D335 /* AppManager+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AppManager+Extension.swift"; sourceTree = "<group>"; };
@@ -105,6 +104,7 @@
 		DFBEC6A325D0680B00E097EA /* NSLayoutConstraint+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSLayoutConstraint+Extensions.swift"; sourceTree = "<group>"; };
 		DFF85B7425D131D3000BEC2B /* NetworkingTestCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingTestCase.swift; sourceTree = "<group>"; };
 		DFF85B7625D13936000BEC2B /* AboutCanadaViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutCanadaViewModelTests.swift; sourceTree = "<group>"; };
+		FE964EEA811EF0D45902FA7B /* Pods-AboutCanadaTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AboutCanadaTests.release.xcconfig"; path = "Target Support Files/Pods-AboutCanadaTests/Pods-AboutCanadaTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -308,10 +308,10 @@
 			children = (
 				179F7962D19980FAB1F0F14F /* Pods-AboutCanada.debug.xcconfig */,
 				91E56B877A23EDBA63A91725 /* Pods-AboutCanada.release.xcconfig */,
-				6CAB43A627EE786F93ADC6F6 /* Pods-AboutCanadaTests.debug.xcconfig */,
-				CB77449FF3510B513679B94B /* Pods-AboutCanadaTests.release.xcconfig */,
 				AE60AEFA089E3437A28CBB9E /* Pods-AboutCanadaUITests.debug.xcconfig */,
 				61368D41ED0A0A4AFC6ACAA4 /* Pods-AboutCanadaUITests.release.xcconfig */,
+				2F5FFA14EE048032D16DEAD0 /* Pods-AboutCanadaTests.debug.xcconfig */,
+				FE964EEA811EF0D45902FA7B /* Pods-AboutCanadaTests.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -328,6 +328,7 @@
 				DF4E943825D3F81100CB140D /* Frameworks */,
 				DF4E943925D3F81100CB140D /* Resources */,
 				DF4E944525D3FFD000CB140D /* CopyFiles */,
+				8D4229EB7B3938951931848E /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -347,8 +348,8 @@
 				DFBEC64525CDB02D00E097EA /* Sources */,
 				DFBEC64625CDB02D00E097EA /* Frameworks */,
 				DFBEC64725CDB02D00E097EA /* Resources */,
-				16AE65182A31292584F9AEF9 /* [CP] Embed Pods Frameworks */,
 				DFBEC68F25CFCF4800E097EA /* Run Script */,
+				BE572ECE06DD9F4CBCD13C9C /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -385,7 +386,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1150;
-				LastUpgradeCheck = 1150;
+				LastUpgradeCheck = 1200;
 				ORGANIZATIONNAME = "Vivek Goswami";
 				TargetAttributes = {
 					DF4E943A25D3F81100CB140D = {
@@ -449,23 +450,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		16AE65182A31292584F9AEF9 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-AboutCanada/Pods-AboutCanada-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-AboutCanada/Pods-AboutCanada-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-AboutCanada/Pods-AboutCanada-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		3C12DFFAF48107D8B98ED817 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -510,6 +494,23 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		8D4229EB7B3938951931848E /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-AboutCanadaUITests/Pods-AboutCanadaUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-AboutCanadaUITests/Pods-AboutCanadaUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-AboutCanadaUITests/Pods-AboutCanadaUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		BB59286B170895F00624FE39 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -530,6 +531,23 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BE572ECE06DD9F4CBCD13C9C /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-AboutCanada/Pods-AboutCanada-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-AboutCanada/Pods-AboutCanada-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-AboutCanada/Pods-AboutCanada-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		DFBEC68F25CFCF4800E097EA /* Run Script */ = {
@@ -686,6 +704,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -710,7 +729,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -746,6 +765,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -764,7 +784,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -818,13 +838,13 @@
 		};
 		DFBEC66C25CDB02F00E097EA /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 6CAB43A627EE786F93ADC6F6 /* Pods-AboutCanadaTests.debug.xcconfig */;
+			baseConfigurationReference = 2F5FFA14EE048032D16DEAD0 /* Pods-AboutCanadaTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = AboutCanadaTests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -840,13 +860,13 @@
 		};
 		DFBEC66D25CDB02F00E097EA /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = CB77449FF3510B513679B94B /* Pods-AboutCanadaTests.release.xcconfig */;
+			baseConfigurationReference = FE964EEA811EF0D45902FA7B /* Pods-AboutCanadaTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = AboutCanadaTests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
