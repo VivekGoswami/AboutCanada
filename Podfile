@@ -20,7 +20,6 @@ target 'AboutCanada' do
     # Pods for testing
   end
   target 'AboutCanadaUITests' do
-    inherit! :search_paths
     # Pods for testing
     pod 'Moya', '~> 14.0'
     pod 'SVProgressHUD', '~> 2.2'

@@ -14,17 +14,17 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>Pods-AboutCanada-AboutCanadaUITests.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Pods-AboutCanada.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
 		</dict>
 		<key>Pods-AboutCanadaTests.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
-		<key>Pods-AboutCanadaUITests.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>

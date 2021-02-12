@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		419969D20656A6F93A2BE2D9 /* Pods_AboutCanadaUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3DE482AB57FA60D635532375 /* Pods_AboutCanadaUITests.framework */; };
+		55FC71C5C5CF11816655771C /* Pods_AboutCanada_AboutCanadaUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FDD3086E95F25C957C38CF09 /* Pods_AboutCanada_AboutCanadaUITests.framework */; };
 		957F47B4C6467C656F734FCD /* Pods_AboutCanada.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 23389390A85848E17F53B67A /* Pods_AboutCanada.framework */; };
 		D7BD652513FA0981260A499E /* Pods_AboutCanadaTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 70D781A7A4F6F40BA6B2CDF5 /* Pods_AboutCanadaTests.framework */; };
 		DF3E28E925D523D00030D335 /* Rows.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF3E28E825D523D00030D335 /* Rows.swift */; };
@@ -69,11 +69,9 @@
 		179F7962D19980FAB1F0F14F /* Pods-AboutCanada.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AboutCanada.debug.xcconfig"; path = "Target Support Files/Pods-AboutCanada/Pods-AboutCanada.debug.xcconfig"; sourceTree = "<group>"; };
 		23389390A85848E17F53B67A /* Pods_AboutCanada.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AboutCanada.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2F5FFA14EE048032D16DEAD0 /* Pods-AboutCanadaTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AboutCanadaTests.debug.xcconfig"; path = "Target Support Files/Pods-AboutCanadaTests/Pods-AboutCanadaTests.debug.xcconfig"; sourceTree = "<group>"; };
-		3DE482AB57FA60D635532375 /* Pods_AboutCanadaUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AboutCanadaUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		61368D41ED0A0A4AFC6ACAA4 /* Pods-AboutCanadaUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AboutCanadaUITests.release.xcconfig"; path = "Target Support Files/Pods-AboutCanadaUITests/Pods-AboutCanadaUITests.release.xcconfig"; sourceTree = "<group>"; };
 		70D781A7A4F6F40BA6B2CDF5 /* Pods_AboutCanadaTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AboutCanadaTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		91E56B877A23EDBA63A91725 /* Pods-AboutCanada.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AboutCanada.release.xcconfig"; path = "Target Support Files/Pods-AboutCanada/Pods-AboutCanada.release.xcconfig"; sourceTree = "<group>"; };
-		AE60AEFA089E3437A28CBB9E /* Pods-AboutCanadaUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AboutCanadaUITests.debug.xcconfig"; path = "Target Support Files/Pods-AboutCanadaUITests/Pods-AboutCanadaUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		CC8F8D9155601C4C33DFF97B /* Pods-AboutCanada-AboutCanadaUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AboutCanada-AboutCanadaUITests.debug.xcconfig"; path = "Target Support Files/Pods-AboutCanada-AboutCanadaUITests/Pods-AboutCanada-AboutCanadaUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		DF3E28E825D523D00030D335 /* Rows.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rows.swift; sourceTree = "<group>"; };
 		DF3E28EA25D5242D0030D335 /* Codable+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Codable+Extension.swift"; sourceTree = "<group>"; };
 		DF3E28EE25D530F90030D335 /* AppManager+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AppManager+Extension.swift"; sourceTree = "<group>"; };
@@ -104,6 +102,8 @@
 		DFBEC6A325D0680B00E097EA /* NSLayoutConstraint+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSLayoutConstraint+Extensions.swift"; sourceTree = "<group>"; };
 		DFF85B7425D131D3000BEC2B /* NetworkingTestCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingTestCase.swift; sourceTree = "<group>"; };
 		DFF85B7625D13936000BEC2B /* AboutCanadaViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutCanadaViewModelTests.swift; sourceTree = "<group>"; };
+		E7CAF7D3E7DE2D0D742ED62C /* Pods-AboutCanada-AboutCanadaUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AboutCanada-AboutCanadaUITests.release.xcconfig"; path = "Target Support Files/Pods-AboutCanada-AboutCanadaUITests/Pods-AboutCanada-AboutCanadaUITests.release.xcconfig"; sourceTree = "<group>"; };
+		FDD3086E95F25C957C38CF09 /* Pods_AboutCanada_AboutCanadaUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AboutCanada_AboutCanadaUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FE964EEA811EF0D45902FA7B /* Pods-AboutCanadaTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AboutCanadaTests.release.xcconfig"; path = "Target Support Files/Pods-AboutCanadaTests/Pods-AboutCanadaTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -112,7 +112,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				419969D20656A6F93A2BE2D9 /* Pods_AboutCanadaUITests.framework in Frameworks */,
+				55FC71C5C5CF11816655771C /* Pods_AboutCanada_AboutCanadaUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -140,7 +140,7 @@
 			children = (
 				23389390A85848E17F53B67A /* Pods_AboutCanada.framework */,
 				70D781A7A4F6F40BA6B2CDF5 /* Pods_AboutCanadaTests.framework */,
-				3DE482AB57FA60D635532375 /* Pods_AboutCanadaUITests.framework */,
+				FDD3086E95F25C957C38CF09 /* Pods_AboutCanada_AboutCanadaUITests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -308,10 +308,10 @@
 			children = (
 				179F7962D19980FAB1F0F14F /* Pods-AboutCanada.debug.xcconfig */,
 				91E56B877A23EDBA63A91725 /* Pods-AboutCanada.release.xcconfig */,
-				AE60AEFA089E3437A28CBB9E /* Pods-AboutCanadaUITests.debug.xcconfig */,
-				61368D41ED0A0A4AFC6ACAA4 /* Pods-AboutCanadaUITests.release.xcconfig */,
 				2F5FFA14EE048032D16DEAD0 /* Pods-AboutCanadaTests.debug.xcconfig */,
 				FE964EEA811EF0D45902FA7B /* Pods-AboutCanadaTests.release.xcconfig */,
+				CC8F8D9155601C4C33DFF97B /* Pods-AboutCanada-AboutCanadaUITests.debug.xcconfig */,
+				E7CAF7D3E7DE2D0D742ED62C /* Pods-AboutCanada-AboutCanadaUITests.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -487,7 +487,7 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-AboutCanadaUITests-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-AboutCanada-AboutCanadaUITests-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -500,15 +500,15 @@
 			files = (
 			);
 			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-AboutCanadaUITests/Pods-AboutCanadaUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-AboutCanada-AboutCanadaUITests/Pods-AboutCanada-AboutCanadaUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-AboutCanadaUITests/Pods-AboutCanadaUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-AboutCanada-AboutCanadaUITests/Pods-AboutCanada-AboutCanadaUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-AboutCanadaUITests/Pods-AboutCanadaUITests-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-AboutCanada-AboutCanadaUITests/Pods-AboutCanada-AboutCanadaUITests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		BB59286B170895F00624FE39 /* [CP] Check Pods Manifest.lock */ = {
@@ -642,7 +642,7 @@
 /* Begin XCBuildConfiguration section */
 		DF4E944325D3F81100CB140D /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = AE60AEFA089E3437A28CBB9E /* Pods-AboutCanadaUITests.debug.xcconfig */;
+			baseConfigurationReference = CC8F8D9155601C4C33DFF97B /* Pods-AboutCanada-AboutCanadaUITests.debug.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = AboutCanadaUITests/Info.plist;
@@ -661,7 +661,7 @@
 		};
 		DF4E944425D3F81100CB140D /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 61368D41ED0A0A4AFC6ACAA4 /* Pods-AboutCanadaUITests.release.xcconfig */;
+			baseConfigurationReference = E7CAF7D3E7DE2D0D742ED62C /* Pods-AboutCanada-AboutCanadaUITests.release.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = AboutCanadaUITests/Info.plist;
