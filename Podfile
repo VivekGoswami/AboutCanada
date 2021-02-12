@@ -21,11 +21,6 @@ target 'AboutCanada' do
   end
   target 'AboutCanadaUITests' do
     # Pods for testing
-    pod 'Moya', '~> 14.0'
-    pod 'SVProgressHUD', '~> 2.2'
-    pod 'ReachabilitySwift', '~> 5.0'
-    pod 'SwiftLint', '~> 0.42'
-    pod 'SDWebImage', '~> 5.0'
   end
 
 end
