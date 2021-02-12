@@ -20,6 +20,7 @@ target 'AboutCanada' do
     # Pods for testing
   end
   target 'AboutCanadaUITests' do
+    inherit! :search_paths
     # Pods for testing
   end
 
